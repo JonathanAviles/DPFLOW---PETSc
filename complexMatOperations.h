@@ -1,0 +1,24 @@
+#ifndef COMPLEXMATOPERATIONS_H
+#define COMPLEXMATOPERATIONS_H
+
+#include <petscmat.h>
+
+#define nelem(x) (sizeof(x) / sizeof((x)[0]))
+
+PetscErrorCode complexProduct(PetscScalar*, PetscScalar* resultImag, PetscScalar*, PetscScalar*, PetscInt);
+
+PetscErrorCode complexMatrixDeterminant_2x2(PetscScalar*, PetscScalar*, PetscScalar*, PetscScalar*);
+
+PetscErrorCode complexMatrixDeterminant_3x3(PetscScalar*, PetscScalar*, PetscScalar*, PetscScalar*);
+
+PetscErrorCode complexScalarInverse(PetscScalar*, PetscScalar*, PetscScalar, PetscScalar);
+
+PetscErrorCode complexMatrixInverse_2x2(PetscScalar*, PetscScalar*, PetscScalar*, PetscScalar*);
+
+PetscErrorCode complexMatrixInverse_3x3(PetscScalar*, PetscScalar*, PetscScalar*, PetscScalar*);
+
+PetscErrorCode zeroRowColIndexes_SymMat3x3(PetscInt*, PetscInt*, PetscScalar*, PetscScalar*);
+
+PetscErrorCode setUnion(PetscInt*, PetscInt*, PetscInt, PetscInt*, PetscInt);
+
+#endif
