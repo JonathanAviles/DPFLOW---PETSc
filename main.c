@@ -1,7 +1,7 @@
 static char help[] = "Run this program:\n\
                       mpiexec -n 1 ./dpflow\n\
                       mpiexec -n 1 ./dpflow -pfdata <filename>\n";
-                      
+
 /* T
    Concepts: DMNetwork
    Concepts: PETSc SNES solver
@@ -783,7 +783,7 @@ PetscErrorCode PrintDPFOutput(Vec X)
 int main(int argc,char ** argv)
 {
   PetscErrorCode ierr;
-  char           pfdata_file[PETSC_MAX_PATH_LEN]="datafiles/distCase_4Dyn1.m";
+  char           pfdata_file[PETSC_MAX_PATH_LEN]="distCase_4Dyn1.m";
   PFDATA         *pfdata;
   PetscInt       numEdges=0,numVertices=0;
   int            *edges = NULL;
